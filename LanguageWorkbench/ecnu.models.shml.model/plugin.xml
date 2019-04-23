@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated shml -->
+      <package
+            uri="http://www.example.org/shml"
+            class="shml.ShmlPackage"
+            genModel="model/shml.genmodel"/>
+   </extension>
+
+</plugin>

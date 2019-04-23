@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="ASCII"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/ecnu.models.xshml.xshml/src/" modelPluginID="ecnu.models.xshml.xshml" modelName="XSHML" complianceLevel="7.0" copyrightFields="false">
+  <foreignModel>platform:/resource/ecnu.models.xshml.xshml/model/XSHML.ecore</foreignModel>
+  <genPackages prefix="Shml" basePackage="ecnu.models.xshml.xshml" disposableProviderFactory="true" fileExtensions="xshml">
+    <ecorePackage href="XSHML.ecore#/"/>
+    <genClasses>
+      <ecoreClass href="XSHML.ecore#//System"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="XSHML.ecore#//System/name"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSHML.ecore#//System/tshss"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSHML.ecore#//System/globalvariables"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSHML.ecore#//System/globalclocks"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSHML.ecore#//System/globalevents"/>
+      </genFeatures>
+      <genOperations>
+        <ecoreOperation href="XSHML.ecore#//System/main"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="XSHML.ecore#//System/doprintconfiguration"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="XSHML.ecore#//System/dojump"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="XSHML.ecore#//System/callscilab"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="XSHML.ecore#//System/RealizeInitializeModel"/>
+        <genParameters>
+          <ecoreParameter href="XSHML.ecore#//System/RealizeInitializeModel/arguments"/>
+        </genParameters>
+      </genOperations>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="XSHML.ecore#//TSHS"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="XSHML.ecore#//TSHS/name"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSHML.ecore#//TSHS/ownedodes"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSHML.ecore#//TSHS/ownedstates"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSHML.ecore#//TSHS/ownedtransitions"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSHML.ecore#//TSHS/localvariables"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSHML.ecore#//TSHS/localclocks"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSHML.ecore#//TSHS/localevents"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSHML.ecore#//TSHS/initialstate"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSHML.ecore#//TSHS/ownedexpos"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSHML.ecore#//TSHS/ownedactions"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSHML.ecore#//TSHS/ownedguards"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSHML.ecore#//TSHS/ownedunifs"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="XSHML.ecore#//Variable"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="XSHML.ecore#//Variable/name"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="XSHML.ecore#//Variable/value"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="XSHML.ecore#//Clock"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="XSHML.ecore#//Clock/name"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="XSHML.ecore#//Clock/time"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="XSHML.ecore#//Event"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="XSHML.ecore#//Event/name"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="XSHML.ecore#//Event/send"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="XSHML.ecore#//Event/receive"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="XSHML.ecore#//Event/active"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses image="false">
+      <ecoreClass href="XSHML.ecore#//Transition"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="XSHML.ecore#//Transition/name"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSHML.ecore#//Transition/triggerevent"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSHML.ecore#//Transition/taction"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSHML.ecore#//Transition/evaluateguard"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSHML.ecore#//Transition/temporalguard"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses image="false">
+      <ecoreClass href="XSHML.ecore#//Guard"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="XSHML.ecore#//Guard/name"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="XSHML.ecore#//TemporalGuard"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="XSHML.ecore#//TemporalGuard/tcondition"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSHML.ecore#//TemporalGuard/onclock"/>
+      </genFeatures>
+      <genOperations>
+        <ecoreOperation href="XSHML.ecore#//TemporalGuard/holdstg"/>
+      </genOperations>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="XSHML.ecore#//EvaluateGuard"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="XSHML.ecore#//EvaluateGuard/vcondition"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSHML.ecore#//EvaluateGuard/onvariable"/>
+      </genFeatures>
+      <genOperations>
+        <ecoreOperation href="XSHML.ecore#//EvaluateGuard/holdseg"/>
+      </genOperations>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="XSHML.ecore#//State"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="XSHML.ecore#//State/name"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSHML.ecore#//State/slaveode"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSHML.ecore#//State/outgoingct"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSHML.ecore#//State/incomingct"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSHML.ecore#//State/outgoingpt"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSHML.ecore#//State/incomingpt"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSHML.ecore#//State/subdiagram"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSHML.ecore#//State/fatherstate"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSHML.ecore#//State/slavelambda"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSHML.ecore#//State/slaveunif"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="XSHML.ecore#//ComTransition"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSHML.ecore#//ComTransition/csrc"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSHML.ecore#//ComTransition/ctgt"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="XSHML.ecore#//ProbTransition"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="XSHML.ecore#//ProbTransition/probability"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSHML.ecore#//ProbTransition/psrc"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSHML.ecore#//ProbTransition/ptgt"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="XSHML.ecore#//Function"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="XSHML.ecore#//Function/name"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSHML.ecore#//Function/indevariable"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSHML.ecore#//Function/devariable"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSHML.ecore#//Function/fright"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="XSHML.ecore#//IndeVariable"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="XSHML.ecore#//IndeVariable/name"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="XSHML.ecore#//DeVariable"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="XSHML.ecore#//DeVariable/name"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="XSHML.ecore#//Fright"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="XSHML.ecore#//Fright/name"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="XSHML.ecore#//ODE"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="XSHML.ecore#//ODE/name"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSHML.ecore#//ODE/condition"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSHML.ecore#//ODE/interval"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSHML.ecore#//ODE/function"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="XSHML.ecore#//Condition"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="XSHML.ecore#//Condition/name"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="XSHML.ecore#//Interval"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="XSHML.ecore#//Interval/name"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="XSHML.ecore#//Interval/left"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="XSHML.ecore#//Interval/right"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="XSHML.ecore#//Interval/subinterval"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="XSHML.ecore#//ExpoDistribution"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="XSHML.ecore#//ExpoDistribution/lambda"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="XSHML.ecore#//Action"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="XSHML.ecore#//Action/action"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="XSHML.ecore#//UnifDistribution"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="XSHML.ecore#//UnifDistribution/a"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="XSHML.ecore#//UnifDistribution/b"/>
+      </genFeatures>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

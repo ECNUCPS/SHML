@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/ecnu.models.shml.model/src" modelPluginID="ecnu.models.shml.model"
+    modelName="Shml" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>shml.ecore</foreignModel>
+  <genPackages prefix="Shml" disposableProviderFactory="true" ecorePackage="shml.ecore#/">
+    <genClasses ecoreClass="shml.ecore#//System">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shml.ecore#//System/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shml.ecore#//System/tshss"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shml.ecore#//System/globalvariables"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shml.ecore#//System/globalclocks"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shml.ecore#//System/globalevents"/>
+    </genClasses>
+    <genClasses ecoreClass="shml.ecore#//TSHS">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shml.ecore#//TSHS/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shml.ecore#//TSHS/ownedodes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shml.ecore#//TSHS/ownedstates"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shml.ecore#//TSHS/ownedtransitions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shml.ecore#//TSHS/localvariables"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shml.ecore#//TSHS/localclocks"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shml.ecore#//TSHS/localevents"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shml.ecore#//TSHS/initialstate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shml.ecore#//TSHS/ownedexpos"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shml.ecore#//TSHS/ownedactions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shml.ecore#//TSHS/ownedguards"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shml.ecore#//TSHS/ownedunifs"/>
+    </genClasses>
+    <genClasses ecoreClass="shml.ecore#//Variable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shml.ecore#//Variable/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shml.ecore#//Variable/value"/>
+    </genClasses>
+    <genClasses ecoreClass="shml.ecore#//Clock">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shml.ecore#//Clock/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shml.ecore#//Clock/time"/>
+    </genClasses>
+    <genClasses ecoreClass="shml.ecore#//Event">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shml.ecore#//Event/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shml.ecore#//Event/send"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shml.ecore#//Event/receive"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shml.ecore#//Event/active"/>
+    </genClasses>
+    <genClasses ecoreClass="shml.ecore#//Transition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shml.ecore#//Transition/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shml.ecore#//Transition/triggerevent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shml.ecore#//Transition/taction"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shml.ecore#//Transition/evaluateguard"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shml.ecore#//Transition/temporalguard"/>
+    </genClasses>
+    <genClasses ecoreClass="shml.ecore#//Guard">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shml.ecore#//Guard/name"/>
+    </genClasses>
+    <genClasses ecoreClass="shml.ecore#//TemporalGuard">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shml.ecore#//TemporalGuard/tcondition"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shml.ecore#//TemporalGuard/onclock"/>
+    </genClasses>
+    <genClasses ecoreClass="shml.ecore#//EvaluateGuard">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shml.ecore#//EvaluateGuard/vcondition"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shml.ecore#//EvaluateGuard/onvariable"/>
+    </genClasses>
+    <genClasses ecoreClass="shml.ecore#//State">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shml.ecore#//State/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shml.ecore#//State/slaveode"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shml.ecore#//State/outgoingct"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shml.ecore#//State/incomingct"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shml.ecore#//State/outgoingpt"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shml.ecore#//State/incomingpt"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shml.ecore#//State/subdiagram"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shml.ecore#//State/fatherstate"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shml.ecore#//State/slavelambda"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shml.ecore#//State/slaveunif"/>
+    </genClasses>
+    <genClasses ecoreClass="shml.ecore#//ComTransition">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shml.ecore#//ComTransition/csrc"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shml.ecore#//ComTransition/ctgt"/>
+    </genClasses>
+    <genClasses ecoreClass="shml.ecore#//ProbTransition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shml.ecore#//ProbTransition/probability"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shml.ecore#//ProbTransition/psrc"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shml.ecore#//ProbTransition/ptgt"/>
+    </genClasses>
+    <genClasses ecoreClass="shml.ecore#//Function">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shml.ecore#//Function/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shml.ecore#//Function/indevariable"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shml.ecore#//Function/devariable"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shml.ecore#//Function/fright"/>
+    </genClasses>
+    <genClasses ecoreClass="shml.ecore#//IndeVariable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shml.ecore#//IndeVariable/name"/>
+    </genClasses>
+    <genClasses ecoreClass="shml.ecore#//DeVariable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shml.ecore#//DeVariable/name"/>
+    </genClasses>
+    <genClasses ecoreClass="shml.ecore#//Fright">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shml.ecore#//Fright/name"/>
+    </genClasses>
+    <genClasses ecoreClass="shml.ecore#//ODE">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shml.ecore#//ODE/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shml.ecore#//ODE/condition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shml.ecore#//ODE/interval"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shml.ecore#//ODE/function"/>
+    </genClasses>
+    <genClasses ecoreClass="shml.ecore#//Condition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shml.ecore#//Condition/name"/>
+    </genClasses>
+    <genClasses ecoreClass="shml.ecore#//Interval">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shml.ecore#//Interval/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shml.ecore#//Interval/left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shml.ecore#//Interval/right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shml.ecore#//Interval/subinterval"/>
+    </genClasses>
+    <genClasses ecoreClass="shml.ecore#//ExpoDistribution">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shml.ecore#//ExpoDistribution/lambda"/>
+    </genClasses>
+    <genClasses ecoreClass="shml.ecore#//Action">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shml.ecore#//Action/action"/>
+    </genClasses>
+    <genClasses ecoreClass="shml.ecore#//UnifDistribution">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shml.ecore#//UnifDistribution/a"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shml.ecore#//UnifDistribution/b"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

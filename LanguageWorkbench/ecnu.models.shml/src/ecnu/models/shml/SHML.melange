@@ -1,0 +1,10 @@
+package ecnu.models.shml
+
+external language SHML {
+	syntax "platform:/resource/ecnu.models.shml.model/model/shml.ecore"
+	
+/*
+ *	with qualified.class.name
+ */
+
+}

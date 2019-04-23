@@ -1,0 +1,29 @@
+package ecnu.models.xshml
+
+language XSHML inherits ecnu.models.shml.SHML{
+
+with ecnu.models2019.shml.k3dsa.shml.aspects.UnifDistributionAspect
+	with ecnu.models2019.shml.k3dsa.shml.aspects.GuardAspect
+	with ecnu.models2019.shml.k3dsa.shml.aspects.IntervalAspect
+	with ecnu.models2019.shml.k3dsa.shml.aspects.ProbTransitionAspect
+	with ecnu.models2019.shml.k3dsa.shml.aspects.EventAspect
+	with ecnu.models2019.shml.k3dsa.shml.aspects.DeVariableAspect
+	with ecnu.models2019.shml.k3dsa.shml.aspects.TSHSAspect
+	with ecnu.models2019.shml.k3dsa.shml.aspects.ClockAspect
+	with ecnu.models2019.shml.k3dsa.shml.aspects.ExpoDistributionAspect
+	with ecnu.models2019.shml.k3dsa.shml.aspects.ConditionAspect
+	with ecnu.models2019.shml.k3dsa.shml.aspects.VariableAspect
+	with ecnu.models2019.shml.k3dsa.shml.aspects.IndeVariableAspect
+	with ecnu.models2019.shml.k3dsa.shml.aspects.ComTransitionAspect
+	with ecnu.models2019.shml.k3dsa.shml.aspects.FunctionAspect
+	with ecnu.models2019.shml.k3dsa.shml.aspects.SystemAspect
+	with ecnu.models2019.shml.k3dsa.shml.aspects.StateAspect
+	with ecnu.models2019.shml.k3dsa.shml.aspects.ActionAspect
+	with ecnu.models2019.shml.k3dsa.shml.aspects.TemporalGuardAspect
+	with ecnu.models2019.shml.k3dsa.shml.aspects.TransitionAspect
+	with ecnu.models2019.shml.k3dsa.shml.aspects.FrightAspect
+	with ecnu.models2019.shml.k3dsa.shml.aspects.ODEAspect
+	with ecnu.models2019.shml.k3dsa.shml.aspects.EvaluateGuardAspect
+
+
+}

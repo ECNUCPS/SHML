@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" name="shml" version="11.1.1.201610211630">
+  <ownedViewpoints name="SHML_Viewpoint" label="SHML_Viewpoint" modelFileExtension="shml">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="SystemView" label="SystemView" initialisation="true" domainClass="shml.System" enablePopupBars="true">
+      <metamodel href="../../ecnu.models.shml.model/model/shml.ecore#/"/>
+      <defaultLayer name="Default">
+        <nodeMappings name="GlobalVariable" label="GlobalVariable" semanticCandidatesExpression="[self.globalvariables/]" domainClass="shml.Variable">
+          <style xsi:type="style:SquareDescription" labelExpression="feature:value" iconPath="/ecnu.models.shml.design/icons/VAR.png" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="GlobalClock" label="GlobalClock" semanticCandidatesExpression="[self.globalclocks/]" domainClass="shml.Clock">
+          <style xsi:type="style:SquareDescription" labelExpression="feature:time" iconPath="/ecnu.models.shml.design/icons/clock.png" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="GlobalEvent" label="GlobalEvent" semanticCandidatesExpression="[self.globalevents/]" domainClass="shml.Event">
+          <style xsi:type="style:SquareDescription" iconPath="/ecnu.models.shml.design/icons/event.png" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="ComTransition" label="ComTransition" sourceMapping="//@ownedViewpoints[name='SHML_Viewpoint']/@ownedRepresentations[name='SystemView']/@defaultLayer/@containerMappings[name='TSHS']/@subNodeMappings[name='State']" targetMapping="//@ownedViewpoints[name='SHML_Viewpoint']/@ownedRepresentations[name='SystemView']/@defaultLayer/@containerMappings[name='TSHS']/@subNodeMappings[name='State']" targetFinderExpression="[self.ctgt/]" sourceFinderExpression="[self.csrc/]" domainClass="shml.ComTransition" useDomainElement="true">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="ProbTransition" label="ProbTransition" sourceMapping="//@ownedViewpoints[name='SHML_Viewpoint']/@ownedRepresentations[name='SystemView']/@defaultLayer/@containerMappings[name='TSHS']/@subNodeMappings[name='State']" targetMapping="//@ownedViewpoints[name='SHML_Viewpoint']/@ownedRepresentations[name='SystemView']/@defaultLayer/@containerMappings[name='TSHS']/@subNodeMappings[name='State']" targetFinderExpression="[self.ptgt/]" sourceFinderExpression="[self.psrc/]" domainClass="shml.ProbTransition" useDomainElement="true">
+          <style lineStyle="dash" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="ODE Edge" label="ODE Edge" sourceMapping="//@ownedViewpoints[name='SHML_Viewpoint']/@ownedRepresentations[name='SystemView']/@defaultLayer/@containerMappings[name='TSHS']/@subNodeMappings[name='State']" targetMapping="//@ownedViewpoints[name='SHML_Viewpoint']/@ownedRepresentations[name='SystemView']/@defaultLayer/@containerMappings[name='TSHS']/@subContainerMappings[name='ODE']" targetFinderExpression="feature:slaveode">
+          <style lineStyle="dash" targetArrow="NoDecoration" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="lambdaEdge" label="lambdaEdge" sourceMapping="//@ownedViewpoints[name='SHML_Viewpoint']/@ownedRepresentations[name='SystemView']/@defaultLayer/@containerMappings[name='TSHS']/@subNodeMappings[name='State']" targetMapping="//@ownedViewpoints[name='SHML_Viewpoint']/@ownedRepresentations[name='SystemView']/@defaultLayer/@containerMappings[name='TSHS']/@subNodeMappings[name='ExpoDistribution']" targetFinderExpression="feature:slavelambda">
+          <style lineStyle="dash" targetArrow="NoDecoration" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="unifEdge" label="unifEdge" sourceMapping="//@ownedViewpoints[name='SHML_Viewpoint']/@ownedRepresentations[name='SystemView']/@defaultLayer/@containerMappings[name='TSHS']/@subNodeMappings[name='State']" targetMapping="//@ownedViewpoints[name='SHML_Viewpoint']/@ownedRepresentations[name='SystemView']/@defaultLayer/@containerMappings[name='TSHS']/@subContainerMappings[name='UnifDistribution']" targetFinderExpression="feature:slaveunif">
+          <style lineStyle="dash" targetArrow="NoDecoration" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <containerMappings name="TSHS" label="TSHS" semanticCandidatesExpression="[self.tshss/]" domainClass="shml.TSHS">
+          <subNodeMappings name="Probability" label="Probability" semanticCandidatesExpression="feature:ownedtransitions" domainClass="shml.ProbTransition">
+            <style xsi:type="style:EllipseNodeDescription" labelExpression="feature:probability" iconPath="/ecnu.models.shml.design/icons/prob.png" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="State" label="State" semanticCandidatesExpression="feature:ownedstates" domainClass="shml.State">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="11" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/ecnu.models.shml.design/icons/State.png">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="ExpoDistribution" label="ExpoDistribution" semanticCandidatesExpression="feature:ownedexpos" domainClass="shml.ExpoDistribution">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="10" labelExpression="feature:lambda" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/ecnu.models.shml.design/icons/lanm.png">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="Action" label="Action" semanticCandidatesExpression="feature:ownedactions" domainClass="shml.Action">
+            <style xsi:type="style:EllipseNodeDescription" labelExpression="feature:action" iconPath="/ecnu.models.shml.design/icons/action.png" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="LocalEvent" label="LocalEvent" semanticCandidatesExpression="feature:localevents" domainClass="shml.Event">
+            <style xsi:type="style:SquareDescription" iconPath="/ecnu.models.shml.design/icons/event.png" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="EvaluateGuard" label="EvaluateGuard" semanticCandidatesExpression="feature:ownedguards" domainClass="shml.EvaluateGuard">
+            <style xsi:type="style:SquareDescription" labelExpression="feature:vcondition" iconPath="/ecnu.models.shml.design/icons/guard.png" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="TemporalGuard" label="TemporalGuard" semanticCandidatesExpression="feature:ownedguards" domainClass="shml.TemporalGuard">
+            <style xsi:type="style:SquareDescription" labelExpression="feature:tcondition" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="a" label="a" semanticCandidatesExpression="feature:ownedunifs" domainClass="shml.UnifDistribution">
+            <style xsi:type="style:SquareDescription" labelSize="10" labelExpression="feature:a" iconPath="/ecnu.models.shml.design/icons/a.png" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="b" label="b" semanticCandidatesExpression="feature:ownedunifs" domainClass="shml.UnifDistribution">
+            <style xsi:type="style:SquareDescription" labelSize="10" labelExpression="feature:b" iconPath="/ecnu.models.shml.design/icons/b.png" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </subNodeMappings>
+          <subContainerMappings name="ODE" label="ODE" semanticCandidatesExpression="feature:ownedodes" domainClass="shml.ODE">
+            <subNodeMappings name="Condition" label="Condition" semanticCandidatesExpression="feature:condition" domainClass="shml.Condition">
+              <style xsi:type="style:SquareDescription" iconPath="/ecnu.models.shml.design/icons/co.png" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </subNodeMappings>
+            <subNodeMappings name="Intervalleft" label="Intervalleft" semanticCandidatesExpression="feature:interval" domainClass="shml.Interval">
+              <style xsi:type="style:SquareDescription" labelExpression="feature:left" iconPath="/ecnu.models.shml.design/icons/left.png" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </subNodeMappings>
+            <subNodeMappings name="Intervalright" label="Intervalright" semanticCandidatesExpression="feature:interval" domainClass="shml.Interval">
+              <style xsi:type="style:SquareDescription" labelExpression="feature:right" iconPath="/ecnu.models.shml.design/icons/right.png" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </subNodeMappings>
+            <subNodeMappings name="Subinterval" label="Subinterval" semanticCandidatesExpression="feature:interval" domainClass="shml.Interval">
+              <style xsi:type="style:SquareDescription" labelExpression="feature:subinterval" iconPath="/ecnu.models.shml.design/icons/subinterval.png" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </subNodeMappings>
+            <subContainerMappings name="Interval" label="Interval" semanticCandidatesExpression="feature:interval" domainClass="shml.Interval">
+              <style xsi:type="style:WorkspaceImageDescription" iconPath="/ecnu.models.shml.design/icons/inte.png" labelAlignment="LEFT" workspacePath="/ecnu.models.shml.design/icons/Interval.png">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </style>
+            </subContainerMappings>
+            <subContainerMappings name="Function" label="Function" semanticCandidatesExpression="feature:function" domainClass="shml.Function">
+              <subNodeMappings name="Fright" label="Fright" semanticCandidatesExpression="feature:fright" domainClass="shml.Fright">
+                <style xsi:type="style:SquareDescription" iconPath="/ecnu.models.shml.design/icons/ydot.png" labelPosition="node" resizeKind="NSEW">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+                </style>
+              </subNodeMappings>
+              <subNodeMappings name="IndeVariable" label="IndeVariable" semanticCandidatesExpression="feature:indevariable" domainClass="shml.IndeVariable">
+                <style xsi:type="style:SquareDescription" labelSize="10" iconPath="/ecnu.models.shml.design/icons/in.png" labelPosition="node" resizeKind="NSEW">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+                </style>
+              </subNodeMappings>
+              <subNodeMappings name="DeVariable" label="DeVariable" semanticCandidatesExpression="feature:devariable" domainClass="shml.DeVariable">
+                <style xsi:type="style:SquareDescription" iconPath="/ecnu.models.shml.design/icons/de.png" labelPosition="node" resizeKind="NSEW">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+                </style>
+              </subNodeMappings>
+              <style xsi:type="style:WorkspaceImageDescription" iconPath="/ecnu.models.shml.design/icons/function.png" workspacePath="/ecnu.models.shml.design/icons/Interval.png">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </style>
+            </subContainerMappings>
+            <style xsi:type="style:WorkspaceImageDescription" workspacePath="/ecnu.models.shml.design/icons/zhushi-smalll.png">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </subContainerMappings>
+          <subContainerMappings name="Transition" label="Transition" semanticCandidatesExpression="feature:ownedtransitions" domainClass="shml.Transition">
+            <subNodeMappings name="Triggerevent" label="Triggerevent" semanticCandidatesExpression="feature:triggerevent" domainClass="shml.Event">
+              <style xsi:type="style:SquareDescription" iconPath="/ecnu.models.shml.design/icons/event.png" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </subNodeMappings>
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="1" showIcon="false" labelExpression="" iconPath="/ecnu.models.shml.design/icons/event.png" hideLabelByDefault="true" workspacePath="/ecnu.models.shml.design/icons/transition.png">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </subContainerMappings>
+          <subContainerMappings name="UnifDistribution" label="UnifDistribution" semanticCandidatesExpression="feature:ownedunifs" domainClass="shml.UnifDistribution">
+            <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="" workspacePath="/ecnu.models.shml.design/icons/unif.png">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </subContainerMappings>
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="16" workspacePath="/ecnu.models.shml.design/icons/TSHS.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </containerMappings>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="ecnu.models.shml.design.Services"/>
+  </ownedViewpoints>
+</description:Group>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?eclipse version="3.4"?><plugin>
+  <extension point="org.gemoc.gemoc_language_workbench.sequential.xdsml">
+    <XDSML_Definition modelLoader_class="org.gemoc.executionframework.extensions.sirius.modelloader.DefaultModelLoader" name="ecnu.models.xshml.XSHML" xdsmlFilePath="/ecnu.models.xshml/bin/ecnu/models/xshml/XSHML.melange"/>
+  </extension>
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <!-- @generated XSHMLMT -->
+    <package class="ecnu.models.xshml.xshmlmt.shml.ShmlPackage" genModel="model-gen/XSHMLMT.genmodel" uri="http://ecnu.models.xshml.xshmlmt/shml/"/>
+  </extension>
+  
+<extension point="fr.inria.diverse.melange.modeltype">
+    <modeltype id="ecnu.models.xshml.XSHMLMT" uri="http://ecnu.models.xshml.xshmlmt/">
+      <subtyping modeltypeId="ecnu.models.shml.SHMLMT"/>
+    </modeltype>
+  </extension>
+  <extension point="fr.inria.diverse.melange.language">
+    <language aspects="ExpoDistribution:ecnu.models.xshml.xshml.aspects.ExpoDistributionAspect;Condition:ecnu.models.xshml.xshml.aspects.ConditionAspect;ProbTransition:ecnu.models.xshml.xshml.aspects.ProbTransitionAspect;Action:ecnu.models.xshml.xshml.aspects.ActionAspect;Variable:ecnu.models.xshml.xshml.aspects.VariableAspect;ComTransition:ecnu.models.xshml.xshml.aspects.ComTransitionAspect;UnifDistribution:ecnu.models.xshml.xshml.aspects.UnifDistributionAspect;Clock:ecnu.models.xshml.xshml.aspects.ClockAspect;TemporalGuard:ecnu.models.xshml.xshml.aspects.TemporalGuardAspect;TSHS:ecnu.models.xshml.xshml.aspects.TSHSAspect;System:ecnu.models.xshml.xshml.aspects.SystemAspect;Function:ecnu.models.xshml.xshml.aspects.FunctionAspect;ODE:ecnu.models.xshml.xshml.aspects.ODEAspect;State:ecnu.models.xshml.xshml.aspects.StateAspect;EvaluateGuard:ecnu.models.xshml.xshml.aspects.EvaluateGuardAspect;Transition:ecnu.models.xshml.xshml.aspects.TransitionAspect;Event:ecnu.models.xshml.xshml.aspects.EventAspect;Guard:ecnu.models.xshml.xshml.aspects.GuardAspect;DeVariable:ecnu.models.xshml.xshml.aspects.DeVariableAspect;Fright:ecnu.models.xshml.xshml.aspects.FrightAspect;IndeVariable:ecnu.models.xshml.xshml.aspects.IndeVariableAspect;Interval:ecnu.models.xshml.xshml.aspects.IntervalAspect" entryPoints="ecnu.models.xshml.xshml.aspects.SystemAspect.main(ecnu.models.xshml.xshml.shml.System)" exactType="ecnu.models.xshml.XSHMLMT" id="ecnu.models.xshml.XSHML" uri="http://ecnu.models.xshml.xshml/shml/">
+      <adapter class="ecnu.models.xshml.xshml.adapters.shmlmt.XSHMLAdapter" modeltypeId="ecnu.models.shml.SHMLMT"/>
+      <adapter class="ecnu.models.xshml.xshml.adapters.xshmlmt.XSHMLAdapter" modeltypeId="ecnu.models.xshml.XSHMLMT"/>
+    </language>
+  </extension>
+</plugin>

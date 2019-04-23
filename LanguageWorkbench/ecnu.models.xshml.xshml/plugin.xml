@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<plugin>
+
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated XSHML -->
+      <package
+            uri="http://ecnu.models.xshml.xshml/shml/"
+            class="ecnu.models.xshml.xshml.shml.ShmlPackage"
+            genModel="model/XSHML.genmodel"/>
+   </extension>
+
+</plugin>

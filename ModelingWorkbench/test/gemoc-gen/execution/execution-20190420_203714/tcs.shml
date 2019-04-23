@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shml:System xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:shml="http://www.example.org/shml" name="TCS">
+  <tshss name="TSHS1" initialstate="//@tshss.0/@ownedstates.0">
+    <ownedodes name="Warming_ODE">
+      <condition name="y0=21"/>
+      <interval right="120.0" subinterval="0.1"/>
+      <function name="f1">
+        <indevariable name="t"/>
+        <devariable name="y"/>
+        <fright name="0.017*y-0.1"/>
+      </function>
+    </ownedodes>
+    <ownedodes name="EF_ODE">
+      <condition name="y0=22"/>
+      <interval right="120.0" subinterval="0.1"/>
+      <function name="f2">
+        <indevariable name="t"/>
+        <devariable name="y"/>
+        <fright name="-0.01*y-0.1"/>
+      </function>
+    </ownedodes>
+    <ownedodes name="AC_ODE">
+      <condition name="y0=22"/>
+      <interval right="120.0" subinterval="0.1"/>
+      <function name="f3">
+        <indevariable name="t"/>
+        <devariable name="y"/>
+        <fright name="-0.07*y-0.1"/>
+      </function>
+    </ownedodes>
+    <ownedstates name="OFF_Warming" slaveode="//@tshss.0/@ownedodes.0" outgoingct="//@tshss.0/@ownedtransitions.0 //@tshss.0/@ownedtransitions.1" incomingct="//@tshss.0/@ownedtransitions.2 //@tshss.0/@ownedtransitions.3"/>
+    <ownedstates name="ON_EF" slaveode="//@tshss.0/@ownedodes.1" outgoingct="//@tshss.0/@ownedtransitions.2" incomingct="//@tshss.0/@ownedtransitions.0"/>
+    <ownedstates name="ON_AC" slaveode="//@tshss.0/@ownedodes.2" outgoingct="//@tshss.0/@ownedtransitions.3" incomingct="//@tshss.0/@ownedtransitions.1"/>
+    <ownedtransitions xsi:type="shml:ComTransition" name="OFF_Warming_ONEF" triggerevent="//@globalevents.1" taction="//@tshss.0/@ownedactions.3" evaluateguard="//@tshss.0/@ownedguards.3" csrc="//@tshss.0/@ownedstates.0" ctgt="//@tshss.0/@ownedstates.1"/>
+    <ownedtransitions xsi:type="shml:ComTransition" name="OFF_Warming_ONAC" triggerevent="//@globalevents.3" taction="//@tshss.0/@ownedactions.2" evaluateguard="//@tshss.0/@ownedguards.2" csrc="//@tshss.0/@ownedstates.0" ctgt="//@tshss.0/@ownedstates.2"/>
+    <ownedtransitions xsi:type="shml:ComTransition" name="ONEF_OFFWarming" triggerevent="//@tshss.0/@localevents.0" taction="//@tshss.0/@ownedactions.1" evaluateguard="//@tshss.0/@ownedguards.1" csrc="//@tshss.0/@ownedstates.1" ctgt="//@tshss.0/@ownedstates.0"/>
+    <ownedtransitions xsi:type="shml:ComTransition" name="ONAC_OFFWarming" triggerevent="//@tshss.0/@localevents.1" taction="//@tshss.0/@ownedactions.0" evaluateguard="//@tshss.0/@ownedguards.0" csrc="//@tshss.0/@ownedstates.2" ctgt="//@tshss.0/@ownedstates.0"/>
+    <localevents name="EF off"/>
+    <localevents name="AC_off"/>
+    <ownedactions action="ONAC_Warming"/>
+    <ownedactions action="ONEF_Warming"/>
+    <ownedactions action="OFFWarming_ONAC"/>
+    <ownedactions action="OFFWarming_ONEF"/>
+    <ownedguards xsi:type="shml:EvaluateGuard" name="ONAC_Warming guard" vcondition="T&lt;21" onvariable="//@globalvariables.0"/>
+    <ownedguards xsi:type="shml:EvaluateGuard" name="ONEF_OFFWarming" vcondition="T&lt;21" onvariable="//@globalvariables.0"/>
+    <ownedguards xsi:type="shml:EvaluateGuard" name="OFFWarmingONAC guard" vcondition="T>22" onvariable="//@globalvariables.0"/>
+    <ownedguards xsi:type="shml:EvaluateGuard" name="OFFWarming_ONEF guard" vcondition="T>22" onvariable="//@globalvariables.0"/>
+  </tshss>
+  <tshss name="TSHS2" initialstate="//@tshss.1/@ownedstates.2">
+    <ownedstates name="Await" incomingct="//@tshss.1/@ownedtransitions.0 //@tshss.1/@ownedtransitions.3 //@tshss.1/@ownedtransitions.4" outgoingpt="//@tshss.1/@ownedtransitions.1 //@tshss.1/@ownedtransitions.2"/>
+    <ownedstates name="ChooseEF" outgoingct="//@tshss.1/@ownedtransitions.3" incomingpt="//@tshss.1/@ownedtransitions.1"/>
+    <ownedstates name="Initial" outgoingct="//@tshss.1/@ownedtransitions.0" slavelambda="//@tshss.1/@ownedexpos.0"/>
+    <ownedstates name="ChooseAC" outgoingct="//@tshss.1/@ownedtransitions.4" incomingpt="//@tshss.1/@ownedtransitions.2"/>
+    <ownedtransitions xsi:type="shml:ComTransition" name="Initial_Await" csrc="//@tshss.1/@ownedstates.2" ctgt="//@tshss.1/@ownedstates.0"/>
+    <ownedtransitions xsi:type="shml:ProbTransition" name="Await_ChooseEF" triggerevent="//@globalevents.0" taction="//@tshss.1/@ownedactions.3" evaluateguard="//@tshss.1/@ownedguards.3" probability="0.4" psrc="//@tshss.1/@ownedstates.0" ptgt="//@tshss.1/@ownedstates.1"/>
+    <ownedtransitions xsi:type="shml:ProbTransition" name="Await_ChooseAC" triggerevent="//@globalevents.2" taction="//@tshss.1/@ownedactions.2" evaluateguard="//@tshss.1/@ownedguards.2" probability="0.6" psrc="//@tshss.1/@ownedstates.0" ptgt="//@tshss.1/@ownedstates.3"/>
+    <ownedtransitions xsi:type="shml:ComTransition" name="ChooseEF_Await" triggerevent="//@tshss.1/@localevents.0" taction="//@tshss.1/@ownedactions.1" evaluateguard="//@tshss.1/@ownedguards.1" csrc="//@tshss.1/@ownedstates.1" ctgt="//@tshss.1/@ownedstates.0"/>
+    <ownedtransitions xsi:type="shml:ComTransition" name="ChooseAC_Await" triggerevent="//@tshss.1/@localevents.0" taction="//@tshss.1/@ownedactions.0" evaluateguard="//@tshss.1/@ownedguards.0" csrc="//@tshss.1/@ownedstates.3" ctgt="//@tshss.1/@ownedstates.0"/>
+    <localevents name="off"/>
+    <ownedexpos lambda="3.0"/>
+    <ownedactions action="ChooseAC_Await"/>
+    <ownedactions action="ChooseEF_Await"/>
+    <ownedactions action="Await_ChooseAC"/>
+    <ownedactions action="Await_ChooseEF"/>
+    <ownedguards xsi:type="shml:EvaluateGuard" name="ChooseAC_Await guard" vcondition="T&lt;21" onvariable="//@globalvariables.0"/>
+    <ownedguards xsi:type="shml:EvaluateGuard" name="ChooseEF_Await guard" vcondition="T&lt;21" onvariable="//@globalvariables.0"/>
+    <ownedguards xsi:type="shml:EvaluateGuard" name="Await_ChooseAC guard" vcondition="T>22" onvariable="//@globalvariables.0"/>
+    <ownedguards xsi:type="shml:EvaluateGuard" name="Await_ChooseEF guard" vcondition="T>22" onvariable="//@globalvariables.0"/>
+  </tshss>
+  <globalvariables name="Temperature" value="21.0"/>
+  <globalclocks name="Clock"/>
+  <globalevents name="s_openEF" send="1"/>
+  <globalevents name="r_openEF" receive="1"/>
+  <globalevents name="s_openAC" send="1"/>
+  <globalevents name="r_openAC" receive="1"/>
+</shml:System>
